@@ -1,0 +1,8 @@
+<h2>Edit Ingredient</h2>
+
+  <form action="/ingredients/<%= @ingredient.id %>/update" method="POST">
+  <label for="ingredient[name]">Name:</label>
+  <input name="ingredient[name]" value="<%= @ingredient.name %>">
+
+  <input type="submit" value="Save">
+</form>

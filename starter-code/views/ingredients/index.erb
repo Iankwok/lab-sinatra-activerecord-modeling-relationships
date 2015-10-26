@@ -1,0 +1,15 @@
+<h2>Ingredient</h2>
+
+<ul class="ingredients">
+  <% @ingredients.each do |ingredient| %>
+    <li><a href="/ingredients/<%= ingredient.id %>"><%= ingredient.name %></a></li>
+    <li><a href="/ingredients/<%= ingredient.id %>/edit">Edit</a></li>
+    <li>
+    <form action="/ingredients/<%= ingredient.id %>/delete" method="post">
+      <input type='submit' value="Delete">
+    </form>
+    </li>
+  <% end %>
+</ul>
+
+<a class="btn" href="/ingredients/new">Add Ingredient</a>
