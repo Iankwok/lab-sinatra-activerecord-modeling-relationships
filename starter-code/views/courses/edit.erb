@@ -1,0 +1,8 @@
+<h2>Edit Course</h2>
+
+  <form action="/courses/<%= @course.id %>/update" method="POST">
+  <label for="course[title]">Title:</label>
+  <input name="course[title]" value="<%= @course.title %>">
+
+  <input type="submit" value="Save">
+</form>

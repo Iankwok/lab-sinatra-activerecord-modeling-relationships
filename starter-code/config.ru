@@ -2,10 +2,14 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
+require "./app"
+require './controllers/course_controller'
+require './controllers/recipe_controller'
+# require './controllers/ingredients_controller'
+
 require "./models/course"
 require "./models/ingredient"
 require "./models/recipe"
 
-require "./app"
-
+use Rack::MethodOverride
 run RecipeApp

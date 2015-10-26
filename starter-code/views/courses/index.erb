@@ -1,0 +1,15 @@
+<h2>Courses</h2>
+
+<ul class="courses">
+  <% @courses.each do |course| %>
+    <li><a href="/courses/<%= course.id %>"><%= course.title %></a></li>
+    <li><a href="/courses/<%= course.id %>/edit">Edit</a></li>
+    <li>
+    <form action="/courses/<%= course.id %>/delete" method="post">
+      <input type='submit' value="Delete">
+    </form>
+    </li>
+  <% end %>
+</ul>
+
+<a class="btn" href="/courses/new">Add Course</a>
