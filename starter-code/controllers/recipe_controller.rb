@@ -44,7 +44,7 @@ class RecipeApp < Sinatra::Base
   end
 
 # destroy
-  delete '/recipes/:id/delete' do
+  post '/recipes/:id/delete' do
     @recipe = Recipe.find(params[:id])
     if @recipe.destroy
       redirect('/recipes')

@@ -2,14 +2,14 @@
 
 <ul class="recipes">
   <% @recipes.each do |recipe| %>
-    <li><a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a></li>
-    <li><a href="/recipes/<%= recipe.id %>"><%= recipe.description %></a></li>
-    <li><a href="/recipes/<%= recipe.id %>"><%= recipe.servings %></a></li>
-    <li><a href="/recipes/<%= recipe.id %>/edit">Edit</a></li>
     <li>
-    <form action="/recipes/<%= recipe.id %>/delete" method="post">
-      <input type='submit' value="Delete">
-    </form>
+      <a href="/recipes/<%= recipe.id %>"><%= recipe.title %> / </a>
+      <%= recipe.description %> /
+      servings: <%= recipe.servings %> /
+      <a href="/recipes/<%= recipe.id %>/edit">Edit /</a>
+      <form action="/recipes/<%= recipe.id %>/delete" method="post">
+        <input type='submit' value="Delete">
+      </form>
     </li>
   <% end %>
 </ul>
